@@ -1,14 +1,16 @@
 {
-  "main.css": "/static/css/main.cfffb8d8.chunk.css",
-  "main.js": "/static/js/main.1ed944ee.chunk.js",
-  "main.js.map": "/static/js/main.1ed944ee.chunk.js.map",
+  "main.css": "/static/css/main.04df25d0.chunk.css",
+  "main.js": "/static/js/main.89caeffb.chunk.js",
+  "main.js.map": "/static/js/main.89caeffb.chunk.js.map",
   "runtime~main.js": "/static/js/runtime~main.fdfcfda2.js",
   "runtime~main.js.map": "/static/js/runtime~main.fdfcfda2.js.map",
-  "static/js/2.d25cb1e9.chunk.js": "/static/js/2.d25cb1e9.chunk.js",
-  "static/js/2.d25cb1e9.chunk.js.map": "/static/js/2.d25cb1e9.chunk.js.map",
+  "static/js/2.a39f774e.chunk.js": "/static/js/2.a39f774e.chunk.js",
+  "static/js/2.a39f774e.chunk.js.map": "/static/js/2.a39f774e.chunk.js.map",
   "index.html": "/index.html",
-  "precache-manifest.7bb5fc0ac973713f64defaabe8030622.js": "/precache-manifest.7bb5fc0ac973713f64defaabe8030622.js",
+  "precache-manifest.e9263ed50d9e64058d42ac2c506e57be.js": "/precache-manifest.e9263ed50d9e64058d42ac2c506e57be.js",
   "service-worker.js": "/service-worker.js",
-  "static/css/main.cfffb8d8.chunk.css.map": "/static/css/main.cfffb8d8.chunk.css.map",
-  "static/media/App.css": "/static/media/3.b0b93acd.gif"
+  "static/css/main.04df25d0.chunk.css.map": "/static/css/main.04df25d0.chunk.css.map",
+  "static/media/App.css": "/static/media/3.b0b93acd.gif",
+  "static/media/telegram-logo.png": "/static/media/telegram-logo.fccb3397.png",
+  "static/media/vk-logo.png": "/static/media/vk-logo.fd70f225.png"
 }
