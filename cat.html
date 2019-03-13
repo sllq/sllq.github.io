@@ -2,7 +2,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+	<title>You have been visited by smug cat</title>
+	<meta charset="utf-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="shortcut icon" href="/assets/cat-end.png" type="image/png">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 * {
@@ -13,16 +16,16 @@ body {
   margin: 0;
   font-family: Arial;
   font-size: 17px;
+	overflow: hidden;
 }
 
-#myVideo {
-	z-index: -1;
-
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 100%; 
+#background-video {
+  left: 50%;
   min-height: 100%;
+  min-width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .content {
@@ -34,6 +37,11 @@ body {
 	left: 50%;
 	margin-top: -337px; /* Negative half of height. */
 	margin-left: -180px; /* Negative half of width. */
+	text-align: center;
+}
+
+a {
+	text-decoration: none;
 }
 
 h1 {
@@ -43,6 +51,26 @@ h1 {
 	color:#fff;
 	font-family:sans-serif
 }
+
+button
+{
+  background-color: #c2759b;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+	width: 150%;
+}
+
+audio 
+{
+	width: 150%;
+}
+
 .smugcat {
 	animation: flip infinite steps(1) 1s;
 }
@@ -53,26 +81,37 @@ transform: scaleX(-1); }
 100% {-webkit-transform: scaleX(1);
 transform: scaleX(1); }
 }
+@media screen and (max-width: 700px)
+{
+	.content {
+		
+	}
+}
 div.hidden
 {
-    display: none;
+	display: none;
 }
 </style>
 </head>
 <body>
 <div class="hidden">
 
-<video autoplay muted loop id="myVideo">
+<video autoplay muted loop id="background-video">
   <source src="assets/grid.mp4" type="video/mp4">
   Your browser does not support HTML5 video.
 </video>
-<audio autoplay="" loop="" preload="auto">
-	<source src="assets/Alive.mp3" type="audio/mp3">
-</audio>
 	  
 <!--	<img alt="very nice cat with smug face walking by" class ="smugcat" src="smugcat.gif" width="360px" height="675px"> -->
 <div class="content">
 	<img alt="very nice cat with smug face walking by" class ="smugcat" src="assets/cat-start.png" width="360px" height="675px">
+	<audio id='audio' autoplay="" loop="" preload="auto" type='audio/mpeg' controls >
+		<source src="assets/Alive.mp3" type="audio/mp3">
+	</audio>
+	<button>
+	<script>
+			document.write('<a href="' + document.referrer + '"><<</a>');
+	</script>
+	</button>
 </div>
 
 <footer>
@@ -81,6 +120,11 @@ div.hidden
 </div>
 </body>
 <script>
-$(document).ready(function () { $('div.hidden').fadeIn(1500); });
+var Audio = $('audio')[0];
+
+var readyState = Audio.readyState;
+
+$(document).ready(function () { (Audio.readyState = 4) ? $('div.hidden').fadeIn(1500) : false});
+$(document).ready(function () { var a = document.getElementById("audio"); a.volume = 0.3;});
 </script>
 </html>
